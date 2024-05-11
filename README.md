@@ -24,3 +24,19 @@ $ source ~/.bashrc
 $ go version
 go version go1.22.3 linux/amd64
 ```
+
+### Go 설정
+내 맘대로 함.
+```bash
+$ go mod init Bcore # go.mod 파일 생성
+$ go get github.com/inconshreveable/log15 # for log
+```
+github.com/ethereum/go-ethereum
+
+github.com/hacpy/go-ethereum
+
+github.com/inconshreveable/log15
+
+github.com/naoina/toml
+
+go.mongodb.org/mongo-driver
