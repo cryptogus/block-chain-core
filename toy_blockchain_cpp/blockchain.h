@@ -1,18 +1,18 @@
 #ifndef __BLOCK_CHAIN_H
 #define __BLOCK_CHAIN_H
 
-#include "block"
-#include <string>
-#include <sstream>
+#include "block.h"
 
+// Blockchain class definition
 class BlockChain {
-
 public:
-    Block block_;
-    void setHash(void);
-    Block *newBlock(string data ,int8_t *prevBlockHash );
+    std::vector<Block*> blocks;
 
-}
+    // Method to add a new block to the blockchain
+    void AddBlock(const std::string &data);
 
+    // Destructor to clean up dynamically allocated memory
+    ~BlockChain();
+};
 
 #endif // __BLOCK_CHAIN_H
