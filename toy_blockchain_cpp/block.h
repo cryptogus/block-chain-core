@@ -2,12 +2,14 @@
 #define __BLOCK_H
 
 #include <cstdint>
+#include <vector>
 
+// block
 struct Block {
     int64_t Timestamp;
-    int8_t *Data;
-    int8_t *PrevBlockHash;
-    int8_t *Hash;
+    std::vector<uint8_t> *Data;
+    std::vector<uint8_t> *PrevBlockHash;
+    std::vector<uint8_t> *Hash;
 };
 
 

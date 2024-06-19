@@ -1,16 +1,18 @@
-#ifndef __BLOCK_H
-#define __BLOCK_H
+#ifndef __BLOCK_CHAIN_H
+#define __BLOCK_CHAIN_H
 
 #include "block"
+#include <string>
+#include <sstream>
 
 class BlockChain {
 
 public:
     Block block_;
-    void setHash(Block *b);
-    Block *NewBlock(string data ,int8_t *prevBlockHash );
+    void setHash(void);
+    Block *newBlock(string data ,int8_t *prevBlockHash );
 
 }
 
 
-#endif // __BLOCK_H
+#endif // __BLOCK_CHAIN_H
