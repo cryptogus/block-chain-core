@@ -18,7 +18,7 @@ int main() {
 
     for (const Block *block : bc.blocks) {
         std::cout << "Prev. hash: " << toHexString(*block->PrevBlockHash) << std::endl;
-        std::cout << "Data: " << toString(*block->Data) << std::endl;
+        std::cout << "Data: " << toHexString(*block->Data) << std::endl;
         std::cout << "Hash: " << toHexString(*block->Hash) << std::endl;
         std::cout << std::endl;
     }

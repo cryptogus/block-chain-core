@@ -18,7 +18,7 @@ struct Block {
 
     Block(const std::string &data, const std::vector<uint8_t> *prevBlockHash);
 
-}
+};
 
 
 #endif // __BLOCK_H
