@@ -8,13 +8,13 @@ void Block::setHash(void) {
 
 
     // Concatenate PrevBlockHash, Data, and timestamp
-    std::vector<unsigned char> headers;
+    std::vector<uint8_t> headers;
     headers.insert(headers.end(), PrevBlockHash->begin(), PrevBlockHash->end());
     headers.insert(headers.end(), Data->begin(), Data->end());
     headers.insert(headers.end(), timestamp.begin(), timestamp.end());
     
     // Compute SHA-256 hash
-    unsigned char hash[SHA256_DIGEST_LENGTH];
+    uint8_t hash[SHA256_DIGEST_LENGTH];
     SHA256_CTX sha256;
     SHA256_Init(&sha256);
     SHA256_Update(&sha256, headers.data(), headers.size());
