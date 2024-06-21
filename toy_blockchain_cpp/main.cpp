@@ -12,18 +12,16 @@ std::string toHexString(const std::vector<uint8_t> &v) {
 
 int main() {
     BlockChain bc;
-
+    bc.NewGenesisBlock();
     bc.AddBlock("Send 1 BTC to Ivan");
     bc.AddBlock("Send 2 more BTC to Ivan");
 
     for (const Block *block : bc.blocks) {
         std::cout << "Prev. hash: " << toHexString(*block->PrevBlockHash) << std::endl;
-        std::cout << "Data: " << toHexString(*block->Data) << std::endl;
+        std::cout << "Data: " << std::string(block->Data->begin(), block->Data->end()) << std::endl;
         std::cout << "Hash: " << toHexString(*block->Hash) << std::endl;
         std::cout << std::endl;
     }
-
-    return 0;
 
     return 0;
 }

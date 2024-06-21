@@ -6,7 +6,6 @@ void Block::setHash(void) {
     std::string timestamp_str = std::to_string(Timestamp);
     std::vector<uint8_t> timestamp(timestamp_str.begin(), timestamp_str.end());
 
-
     // Concatenate PrevBlockHash, Data, and timestamp
     std::vector<uint8_t> headers;
     headers.insert(headers.end(), PrevBlockHash->begin(), PrevBlockHash->end());
