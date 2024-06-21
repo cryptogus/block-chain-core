@@ -10,6 +10,13 @@ https://www.ibm.com/topics/blockchain-iot -> iot에서 blockchain의 역할
 
 임베디드와 암호, 블록체인 + 영지식증명, 네트워크 등을 섞어서 커리어를 만들어보면 어떨까 싶다.
 
+### Build & Execute
+```bash
+$ cmake -B build -S .
+$ cd build && make
+$ ./ToyBlockChain
+```
+
 C++의 `vector`에서 `begin()`과 `data()`의 차이에 대해 설명드리겠습니다.
 
 ### `begin()`
